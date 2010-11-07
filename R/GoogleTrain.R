@@ -9,7 +9,7 @@ function(auth_token, mybucket, mydata) {
     headerfunction = h$update,
     writefunction = b$update
     )
-  list(status = parseHTTPHeader(h$value()), body = b$value())
+  junk <- list(status = parseHTTPHeader(h$value()), body = b$value())
   return(fromJSON(junk$body)) # convert JSON output to R list
 }
 
