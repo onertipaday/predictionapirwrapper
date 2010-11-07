@@ -1,0 +1,11 @@
+Package: predictionapirwrapper
+Type: Package
+Title: R wrapper for working with Google Prediction API
+Version: 1.0
+Date: 2010-11-07
+Author: Paolo Sonego <paolo.sonego@gmail.com>
+Maintainer: Paolo Sonego <paolo.sonego@gmail.com>
+Description: R wrapper for working with Google Prediction API
+Depends: R (>= 2.11.0), RCurl, rjson
+License: MIT
+LazyLoad: yes
