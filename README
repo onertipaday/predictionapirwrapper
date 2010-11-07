@@ -6,9 +6,10 @@ see http://code.google.com/apis/storage/ and http://code.google.com/apis/predict
 
 Example usage:
 
+#This example requires you had previously created a bucket named data_language on your Google Storage and you had uploaded a CSV file named language_id.txt (your data) into this bucket - see for details 
 library(predictionapirwrapper)
 ## The first stage of using the API is to acquire an authorization token. This can be done via this command:
-token <- GetAuthToken(email="paolo.sonego@gmail.com", passwd="")
+token <- GetAuthToken(email="user@gmail.com", passwd="mypassword")
 ## This command begins training on data that has been previously uploaded to Google Storage.
 GoogleTrain(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
 ## Once training has started, this command checks the status of the training job and gets meta-information on the model (if available).
