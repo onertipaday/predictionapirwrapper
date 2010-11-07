@@ -1,0 +1,42 @@
+R wrapper for working with Google Prediction API
+
+This package consists in a bunch of functions allowing the user to test Google Prediction API from R. 
+It requires the user to have access to both Google Storage for Developers and Google Prediction API:
+see http://code.google.com/apis/storage/ and http://code.google.com/apis/predict/ for details.
+
+Example usage:
+
+library(predictionapirwrapper)
+## The first stage of using the API is to acquire an authorization token. This can be done via this command:
+token <- GetAuthToken(email="paolo.sonego@gmail.com", passwd="")
+## This command begins training on data that has been previously uploaded to Google Storage.
+GoogleTrain(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
+## Once training has started, this command checks the status of the training job and gets meta-information on the model (if available).
+GoogleTrainCheck(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
+## When training has finished, this command issues a request for a new prediction from the model. 
+GooglePredict(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt", myinput="La idioma mas fina")
+
+###############################
+
+Copyright (c) 2010 Paolo Sonego
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
