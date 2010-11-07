@@ -1,0 +1,4 @@
+export(GetAuthToken)
+export(GoogleTrain)
+export(GoogleTrainCheck)
+export(GooglePredict)
