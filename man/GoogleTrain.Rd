@@ -22,7 +22,7 @@ a list
 \references{
 http://code.google.com/apis/predict/
 }
-\author{Paolo Sonego <paolo.sonego@cbm.fvg.it>}
+\author{Paolo Sonego <paolo.sonego@gmail.com>}
 \note{
 }
 

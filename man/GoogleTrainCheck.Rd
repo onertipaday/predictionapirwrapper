@@ -10,7 +10,7 @@ Check if the training process is either still running or completed
 GoogleTrainCheck(auth_token, mybucket, mydata)
 }
 \arguments{
-\item{auth_token}{string; the token fetched using GetAuthToken}
+\item{auth_token}{string; the token fetched using \link{GetAuthToken}}
 \item{mybucket}{string; the name of the bucket created on Google Storage}
 \item{mydata}{string; the name of the data set saved into the mybucket on the Google Storage}
 }
@@ -22,7 +22,7 @@ a list
 \references{
 http://code.google.com/apis/predict/
 }
-\author{Paolo Sonego <paolo.sonego@cbm.fvg.it>}
+\author{Paolo Sonego <paolo.sonego@gmail.com>}
 \note{
 }
 
