@@ -16,7 +16,8 @@ GoogleTrain(auth_token=token$Auth, mybucket="data_languages", mydata="language_i
 GoogleTrainCheck(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
 ## When training has finished, this command issues a request for a new prediction from the model. 
 GooglePredict(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt", myinput="La idioma mas fina")
-
+## remove Trained Model
+DeleteTrainedModel(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
 ###############################
 
 Copyright (c) 2010 Paolo Sonego
