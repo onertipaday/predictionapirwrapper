@@ -1,11 +1,12 @@
-R wrapper for working with Google Prediction API
+== R wrapper for working with Google Prediction API
 
 This package consists in a bunch of functions allowing the user to test Google Prediction API from R. 
 It requires the user to have access to both Google Storage for Developers and Google Prediction API:
-see http://code.google.com/apis/storage/ and http://code.google.com/apis/predict/ for details.
+see "here":http://code.google.com/apis/storage/ and "here":http://code.google.com/apis/predict/ for details.
 
-Example usage:
+== Example usage:
 
+<pre>
 #This example requires you had previously created a bucket named data_language on your Google Storage and you had uploaded a CSV file named language_id.txt (your data) into this bucket - see for details 
 library(predictionapirwrapper)
 ## The first stage of using the API is to acquire an authorization token. This can be done via this command:
@@ -18,9 +19,9 @@ GoogleTrainCheck(auth_token=token$Auth, mybucket="data_languages", mydata="langu
 GooglePredict(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt", myinput="La idioma mas fina")
 ## remove Trained Model
 DeleteTrainedModel(auth_token=token$Auth, mybucket="data_languages", mydata="language_id.txt")
-###############################
+</pre>
 
-Copyright (c) 2010 Paolo Sonego
+== Copyright (c) 2010 Paolo Sonego
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
